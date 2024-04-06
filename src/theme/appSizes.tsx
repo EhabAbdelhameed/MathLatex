@@ -1,0 +1,37 @@
+import {Dimensions} from 'react-native';
+import {RFValue} from 'react-native-responsive-fontsize';
+
+const {width, height} = Dimensions.get('window');
+export const appSizes = {
+  s: RFValue(5),
+  m: RFValue(10),
+  l: RFValue(16),
+  x: RFValue(20),
+  width: width,
+  height: height,
+  spacing_s: RFValue(10),
+  spacing_m: RFValue(15),
+  spacing_l: RFValue(20),
+  spacing_x: RFValue(24),
+  spacing_xx: RFValue(30),
+  spacing_xxx: RFValue(35),
+  spacing_xxxx: RFValue(45),
+  padding_s:RFValue(10),
+  padding_m:RFValue(14),
+  padding_l:RFValue(16),
+  padding_x:RFValue(18),
+  font_vs:8,
+  font_vxs:10,
+  font_s:12,
+  font_xs:14,
+  font_m:16,
+  font_l:20,
+  font_xl:24,
+  font_xxl:28,
+  font_xxxl:32,
+  font_xxxxl:36,
+  font_xxxxxl:48,
+  radius_s:5,
+  radius_m:10,
+  radius_l:20,
+};
