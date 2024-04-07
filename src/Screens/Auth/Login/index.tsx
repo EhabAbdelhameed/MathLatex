@@ -106,6 +106,16 @@ const dispatch=useAppDispatch()
              console.log(values)
             dispatch(AuthThunks.doSignIn(formdata)).then((res: any) => {
               setLoading(false);
+              if (res?.meta?.requestStatus == 'fulfilled') {
+                
+              }
+              if(res?.payload?.data?.message=='Please verify your email address!'){
+                navigation.navigate('Verification', {
+                  email: values.Email,
+                  type: 'login',
+                });
+              }
+              console.log("res",res)
               // console.log('Verified ', Verified);
               // if (!Verified && signedUp) {
               //   navigation.navigate('Verification', {

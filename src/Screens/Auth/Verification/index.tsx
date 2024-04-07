@@ -60,11 +60,7 @@ const Verification = () => {
     };
   }, [seconds]);
 
-  useEffect(() => {
-    if (type == 'forget') {
-      Verified && navigation.navigate('ResetPassword', {email, otpValue});
-    } 
-  }, [Verified]);
+ 
 
   const ActiveAccount = () => {
 
@@ -72,6 +68,7 @@ const Verification = () => {
     const formData = new FormData();
     formData.append('email', email);
     formData.append('OTP', value);
+    console.log(value)
     setOtpValue(value);
     // formData.append('type', type == 'Forget' ? 'reset' : 'verify')
    console.log(formData)

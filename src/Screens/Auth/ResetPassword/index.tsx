@@ -26,7 +26,7 @@ const ResetPassword = () => {
   const dispatch = useAppDispatch();
   const [loading, setLoading] = React.useState(false);
   // const loading = useLoadingSelector(AuthThunks.doResetPassword());
-
+console.log(email, otpValue)
   const _handleNavigate = () => {
     navigation.goBack();
   };
@@ -99,7 +99,7 @@ const ResetPassword = () => {
                   secureTextEntry={true}
                 />
 
-                <Button text={'Save Change'} onPress={() => {}} />
+                <Button loading={loading} text={'Save Change'} onPress={props.handleSubmit} />
               </View>
             )}
           </Formik>

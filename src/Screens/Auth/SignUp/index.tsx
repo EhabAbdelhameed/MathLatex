@@ -78,7 +78,7 @@ const SignUp = () => {
  
       // dispatch(AuthThunks.doGetCountries());
       if (country_id && country_id !== '') {
-        console.log("country_id", country_id);
+       
       dispatch(AuthThunks.doGetSchools(country_id));
       }
       // dispatch(AuthThunks.doGetLevels());
@@ -415,7 +415,7 @@ const SignUp = () => {
               />
               {/* <TouchableOpacity onPress={() => navigation.navigate('login')} style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}> */}
               <TouchableOpacity
-                onPress={() => navigation.navigate('Verification')}
+                onPress={() => navigation.navigate('login')}
                 style={{
                   flexDirection: 'row',
                   justifyContent: 'center',

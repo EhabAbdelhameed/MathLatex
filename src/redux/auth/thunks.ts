@@ -7,7 +7,7 @@ const doSignUp: any = createAsyncThunk<any, any, any>(
   async (data: any, thunkApi: any) => {
     try {
       const response = await AuthAPI.register(data);
-      console.log(JSON.stringify(response.data));
+      // console.log(JSON.stringify(response));
 
       if (
         response.status == 400 ||
@@ -32,7 +32,7 @@ const doSignIn: any = createAsyncThunk<any, any, any>(
   async (data: any, thunkApi: any) => {
     try {
       const response = await AuthAPI.login(data);
-      console.log(JSON.stringify(response.data));
+      // console.log(JSON.stringify(response.data));
       if (
         response.status == 400 ||
         response.status == 401 ||
@@ -80,7 +80,7 @@ const doVerifyOTP: any = createAsyncThunk<any, any, any>(
   async (data: any, thunkApi: any) => {
     try {
       const response = await AuthAPI.verifyOTP(data);
-      console.log(JSON.stringify(response.data));
+      // console.log(JSON.stringify(response.data));
       if (
         response.status == 400 ||
         response.status == 401 ||
@@ -201,7 +201,7 @@ const doGetSchools: any = createAsyncThunk<any, any, any>(
   async (data: any, thunkApi: any) => {
     try {
       const response = await AuthAPI.Schools(data);
-      console.warn("SchoolsData",JSON.stringify(response.data))
+      // console.warn("SchoolsData",JSON.stringify(response.data))
       if (
         response.status == 400 ||
         response.status == 401 ||
